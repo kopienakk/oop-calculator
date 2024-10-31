@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #fff;
+}
+
+body.dark {
+    background-color: #181a1f;
+}
+
+/* Toggle Button */
+.toggle-button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2.4rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.toggle-button:hover {
+    transform: rotate(20deg);
+}
+
+/* Calculator Container */
+.calculator {
+    width: 400px;
+    padding: 25px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Display Styling */
+.display {
+    font-size: 2rem;
+    color: #e0e0e0;
+    background-color: #222;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Container */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+/* Button Styling */
+.button, .buttonspecial, .button.operation, .button.number {
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Number Buttons */
+.button.number {
+    background-color: #fafafa;
+    color: #000000;
+}
+
+.button.number:hover {
+    background-color: #61677b;
+}
+
+/* Operation Buttons */
+.button.operation {
+    background-color: #ff7f50;
+    color: #fff;
+}
+
+.button.operation:hover {
+    background-color: #ff9673;
+}
+
+/* Special Buttons (like AC, +/-) */
+.buttonspecial, .button.special1 {
+    background-color: #d20000;
+    color: #e0e0e0;
+}
+.buttonspecial, .button.special {
+    background-color: #3d405b;
+    color: #e0e0e0;
+}
+
+.buttonspecial:hover, .button.special:hover {
+    background-color: #52576d;
+}
+
+/* Zero Button Styling */
+/* .zero {
+    grid-column: span 2;
+} */
+
+/* Dark Mode Toggle */
+body.dark .calculator {
+    background-color: #1f2129;
+}
+
+body.dark .display {
+    background-color: #292b33;
+}
+
+body.dark .button.number {
+    background-color: #3a3d4f;
+    color: #ffffff;
+}
+
+body.dark .button.operation {
+    background-color: #ff7850;
+}
+
+body.dark .buttonspecial, .button.special {
+    background-color: #464a60;
+}
